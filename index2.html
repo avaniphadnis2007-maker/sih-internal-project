@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landslide Risk Monitoring System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="dashboard">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">Real-time hazard dashboard</p>
+          <h1>🌋 LANDSLIDE RISK MONITORING SYSTEM</h1>
+          <p class="subtitle">Enter live field readings to estimate landslide risk for a selected location.</p>
+        </div>
+        <div class="system-status" id="systemStatus">READY</div>
+      </header>
+
+      <section class="content-grid">
+        <form class="input-panel" id="riskForm">
+          <label class="field field-wide" for="location">
+            <span>Location</span>
+            <input id="location" type="text" placeholder="Example: Aizawl" autocomplete="off">
+          </label>
+
+          <label class="field" for="rainfall">
+            <span>Rainfall</span>
+            <div class="input-unit">
+              <input id="rainfall" type="number" min="0" max="300" step="1" placeholder="180" required>
+              <small>mm</small>
+            </div>
+          </label>
+
+          <label class="field" for="soilMoisture">
+            <span>Soil Moisture</span>
+            <div class="input-unit">
+              <input id="soilMoisture" type="number" min="0" max="100" step="1" placeholder="85" required>
+              <small>%</small>
+            </div>
+          </label>
+
+          <label class="field" for="slope">
+            <span>Slope</span>
+            <div class="input-unit">
+              <input id="slope" type="number" min="0" max="70" step="1" placeholder="38" required>
+              <small>deg</small>
+            </div>
+          </label>
+
+          <label class="field" for="elevation">
+            <span>Elevation</span>
+            <div class="input-unit">
+              <input id="elevation" type="number" min="0" max="3000" step="1" placeholder="900" required>
+              <small>m</small>
+            </div>
+          </label>
+
+          <label class="field" for="groundMovement">
+            <span>Ground Movement</span>
+            <div class="input-unit">
+              <input id="groundMovement" type="number" min="0" max="150" step="1" placeholder="70" required>
+              <small>mm</small>
+            </div>
+          </label>
+
+          <button class="check-button" type="submit">CHECK RISK</button>
+        </form>
+
+        <section class="result-panel low" aria-live="polite">
+          <p class="result-label">Risk Score</p>
+          <div class="score-line">
+            <span id="riskScore">--</span>
+            <small>/ 100</small>
+          </div>
+
+          <p class="result-label">Risk Level</p>
+          <div class="risk-level" id="riskLevel">Awaiting input</div>
+
+          <div class="meter" aria-hidden="true">
+            <div class="meter-fill" id="meterFill"></div>
+          </div>
+
+          <p class="result-note" id="riskMessage">
+            Add location readings and click check risk to view the current status.
+          </p>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
