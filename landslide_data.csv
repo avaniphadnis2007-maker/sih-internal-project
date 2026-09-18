@@ -251,7 +251,7 @@ ISRO_STN_003,Himalayan Region,33.7603,76.3719,53.94,-2.33,1.65,-8.7,0.125,Low
 ISRO_STN_020,Western Ghats,11.645,71.1642,53.99,6.98,1.77,-18.14,0.167,Low
 ISRO_STN_004,Central Plateau,21.0614,86.8648,62.33,7.1,1.22,-16.05,0.527,Low
 ISRO_STN_019,Central Plateau,15.2876,90.1905,79.72,2.14,5.93,-12.01,0.55,Low
-ISRO_STN_003,Western Ghats,22.5758,94.8446,68.69,4.26,0.04,-12.Station_ID,Region,Latitude,Longitude,Soil_Moisture_Pct,Ground_Displacement_mm,Rainfall_Rate_mm_hr,SAR_Backscatter_dB,NDVI_Index,Risk_Level
+ISRO_STN_003,Western Ghats,22.5758,94.8446,68.69,4.26,0.04,-12.Station_ID,Region,
 ISRO_STN_007,North-East Hills,33.0141,89.2068,29.9,0.32,0.86,-13.56,0.868,Critical
 ISRO_STN_020,Western Ghats,27.4831,94.3762,23.33,-4.07,0.58,-12.58,0.834,Low
 ISRO_STN_015,Coastal Plains,9.2986,92.8634,61.87,6.46,0.41,-8.03,0.464,Low
