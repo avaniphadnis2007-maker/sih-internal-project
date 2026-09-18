@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landslide Risk Visualization</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="visualization-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Dashboard visualization</p>
+        <h1>📊 Landslide Monitoring Charts</h1>
+      </div>
+      <p class="updated">Updated: Live sample data</p>
+    </header>
+
+    <section class="summary-grid" aria-label="Risk distribution">
+      <article class="risk-card low">
+        <span>LOW</span>
+        <strong id="lowCount">0</strong>
+        <small>locations</small>
+      </article>
+      <article class="risk-card moderate">
+        <span>MODERATE</span>
+        <strong id="moderateCount">0</strong>
+        <small>locations</small>
+      </article>
+      <article class="risk-card high">
+        <span>HIGH</span>
+        <strong id="highCount">0</strong>
+        <small>locations</small>
+      </article>
+      <article class="risk-card critical">
+        <span>CRITICAL</span>
+        <strong id="criticalCount">0</strong>
+        <small>locations</small>
+      </article>
+    </section>
+
+    <section class="main-grid">
+      <section class="chart-panel">
+        <div class="panel-heading">
+          <h2>Rainfall Trend</h2>
+          <span>mm</span>
+        </div>
+        <canvas id="rainfallChart" aria-label="Rainfall trend chart" role="img"></canvas>
+      </section>
+
+      <section class="chart-panel">
+        <div class="panel-heading">
+          <h2>Soil Moisture</h2>
+          <span>%</span>
+        </div>
+        <canvas id="soilChart" aria-label="Soil moisture chart" role="img"></canvas>
+      </section>
+
+      <section class="chart-panel chart-wide">
+        <div class="panel-heading">
+          <h2>Risk Score</h2>
+          <span>/ 100</span>
+        </div>
+        <canvas id="riskChart" aria-label="Risk score chart" role="img"></canvas>
+      </section>
+
+      <aside class="warning-panel critical" id="warningPanel" aria-live="polite">
+        <p class="warning-title" id="warningTitle">🚨 CRITICAL RISK</p>
+        <p id="warningText">Heavy rainfall detected.</p>
+
+        <h3>Possible causes</h3>
+        <ul id="causeList">
+          <li>High rainfall</li>
+          <li>High soil moisture</li>
+          <li>Steep slope</li>
+        </ul>
+
+        <p class="recommendation">⚠️ Immediate monitoring recommended.</p>
+      </aside>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
