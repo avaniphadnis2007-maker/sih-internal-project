@@ -1,9 +1,5 @@
-rainfall,soil_moisture,slope,elevation,ground_movement,risk
-40,30,12,500,5,Low
-80,55,20,650,20,Moderate
-140,75,30,800,50,High
-200,90,42,1000,80,Critical
-60,45,15,550,10,Low
-100,65,25,700,35,High
-30,25,8,450,3,Low
-160,80,35,900,65,Critical
+rainfall,soil_moisture,slope,elevation,risk
+45,30,12,450,Low
+80,50,20,700,Moderate
+125,72,35,1200,High
+210,88,42,980,Critical
